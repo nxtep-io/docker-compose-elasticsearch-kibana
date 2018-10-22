@@ -9,6 +9,12 @@ Kibana is being served behind Nginx Proxy so you can secure access of kibana for
 1. Docker 18.05
 2. Docker-compose 1.21
 
+
+For Linux environments, a memory lock fix may be required:
+```
+sudo sysctl -w vm.max_map_count=262144
+```
+
 ### Start Stack in Daemon Mode
 ```
 docker-compose up -d
